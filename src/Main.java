@@ -240,6 +240,31 @@ public class Main {
 
         System.out.println("No encontrado");
     }
+    //DELETE
+    public void eliminarNota(){
+        System.out.println("Codigo del estudiante:");
+        var codigo = sc.nextLine();
 
+        Estudiante e = buscarPorCodigo(codigo);
+
+        if(e == null){
+            System.out.println("No existe");
+            return;
+        }
+
+        System.out.println("Nombre de la asignatura:");
+        var nombreAsignatura = sc.nextLine();
+
+        for(Nota n : listaNotas){
+            if(n.getAsignatura().getNombre().equals(nombreAsignatura)){
+                listaNotas.remove(n);
+                System.out.println("Nota eliminada");
+                return;
+            }
+        }
+
+        System.out.println("No encontrado");
+    }   
+    
 
 }
