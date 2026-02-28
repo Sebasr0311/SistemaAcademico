@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     static ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
+    static ArrayList<Asignatura> listaAsignaturas = new ArrayList<>();
+    static ArrayList<Nota> listaNotas = new ArrayList<>();
+
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -173,6 +176,42 @@ public class Main {
         nota.setPeriodo(periodo);
         nota.setAsignatura(a);
         System.out.println("Nota registrada");
+    }
+    //READ
+    public void listarNotas(){
+        if(listaNotas.isEmpty()){
+            System.out.println("No hay notas");
+            return;
+        }
+
+        for(Nota n : listaNotas){
+            System.out.println(n);
+            System.out.println("----------------");
+        }
+    }
+
+    public void buscarNota(){
+        System.out.println("Codigo del estudiante:");
+        var codigo = sc.nextLine();
+
+        Estudiante e = buscarPorCodigo(codigo);
+
+        if(e == null){
+            System.out.println("No existe");
+            return;
+        }
+
+        System.out.println("Nombre de la asignatura:");
+        var nombreAsignatura = sc.nextLine();
+
+        for(Nota n : listaNotas){
+            if(n.getAsignatura().getNombre().equals(nombreAsignatura)){
+                System.out.println(n);
+                return;
+            }
+        }
+
+        System.out.println("No encontrado");
     }
 
 }
