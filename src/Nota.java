@@ -36,8 +36,4 @@ public class Nota {
     public String toString() {  
         return "Nota{" + "valor=" + valor + ", periodo=" + periodo + ", asignatura=" + asignatura + '}';
     }
-
-
-
-    
 }
