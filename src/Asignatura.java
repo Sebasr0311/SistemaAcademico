@@ -51,5 +51,5 @@ public class Asignatura {
     public String toString() {
         return "Asignatura{" + "nombre=" + nombre + ", creditos=" + creditos + ", profesor=" + profesor + '}';
     }
-    
+
 }
