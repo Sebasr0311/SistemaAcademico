@@ -2,11 +2,13 @@ public class Nota {
     
     private double valor;
     private Asignatura asignatura;
-    //toString
-    @Override
-    public String toString() {  
-        return "Nota{" + "valor=" + valor + ", asignatura=" + asignatura + '}';
+
+    //Constructor
+    public Nota(double valor, Asignatura asignatura) {
+        this.valor = valor;
+        this.asignatura = asignatura;
     }
+
     //getters y setters
     protected double getValor() {   
         return this.valor;
@@ -20,5 +22,11 @@ public class Nota {
     protected void setAsignatura(Asignatura asignatura) {
         this.asignatura = asignatura;
     }
+       //toString
+    @Override
+    public String toString() {  
+        return "Nota{" + "valor=" + valor + ", asignatura=" + asignatura + '}';
+    }
+
     
 }
