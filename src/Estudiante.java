@@ -9,7 +9,7 @@ public class Estudiante {
 
     }
 
-    public Estudiante(String codigo, string nombre, string apellido, int edad, int semestre){
+    public Estudiante(string codigo, string nombre, string apellido, int edad, int semestre){
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
