@@ -196,6 +196,36 @@ public class Main {
         System.out.println("Asignatura no encontrada");
     }
 
+    static void actualizarAsignatura(){
+        if(listaAsignaturas.isEmpty()){
+            System.out.println("No hay asignaturas registradas");
+            return;
+        }
+
+        System.out.println("Codigo de la asignatura a actualizar:");
+        int codigo = sc.nextInt();
+        sc.nextLine();
+
+        for(Asignatura a : listaAsignaturas){
+            if(a.getCodigo() == codigo){
+
+                System.out.println("Nuevo nombre:");
+                a.setNombre(sc.nextLine());
+
+                System.out.println("Nuevos creditos:");
+                a.setCreditos(sc.nextInt());
+                sc.nextLine();
+
+                System.out.println("Nuevo profesor:");
+                a.setProfesor(sc.nextLine());
+
+                System.out.println("Asignatura actualizada");
+                return;
+            }
+        }
+        System.out.println("Asignatura no encontrada");
+    }
+
     //CREATE
     public void registrarNota(){
         System.out.println("Codigo del estudiante:");
