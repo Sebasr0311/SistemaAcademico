@@ -175,7 +175,10 @@ public class Main {
         nota.setValor(valorNota);
         nota.setPeriodo(periodo);
         nota.setAsignatura(a);
+        
+        listaNotas.add(nota);
         System.out.println("Nota registrada");
+        
     }
     //READ
     public void listarNotas(){
