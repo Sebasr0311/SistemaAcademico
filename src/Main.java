@@ -226,6 +226,26 @@ public class Main {
         System.out.println("Asignatura no encontrada");
     }
 
+    static void eliminarAsignatura(){
+        if(listaAsignaturas.isEmpty()){
+            System.out.println("No hay asignaturas registradas");
+            return;
+        }
+
+        System.out.println("Codigo de la asignatura a eliminar:");
+        int codigo = sc.nextInt();
+        sc.nextLine();
+
+        for(Asignatura a : listaAsignaturas){
+            if(a.getCodigo() == codigo){
+                listaAsignaturas.remove(a);
+                System.out.println("Asignatura eliminada");
+                return;
+            }
+        }
+        System.out.println("Asignatura no encontrada");
+    }
+
     //CREATE
     public void registrarNota(){
         System.out.println("Codigo del estudiante:");
