@@ -80,6 +80,7 @@ public class Estudiante {
         this.semestre = semestre;
     }
 
+    @Override
     public String toString(){
         return "Estudiante" +
                 "\nCodigo: " + codigo +

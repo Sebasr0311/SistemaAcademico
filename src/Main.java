@@ -144,6 +144,28 @@ public class Main {
         listaEstudiantes.remove(e);
         System.out.println("Eliminado");
     }
+
+    static void registrarAsignatura() {
+        System.out.println("Codigo:");
+        int codigo = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Nombre:");
+        String nombre = sc.nextLine();
+
+        System.out.println("Creditos:");
+        int creditos = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Profesor:");
+        String profesor = sc.nextLine();
+
+        Asignatura a = new Asignatura(codigo, nombre, creditos, profesor);
+        listaAsignaturas.add(a);
+
+        System.out.println("Asignatura registrada");
+    }
+
     //CREATE
     public void registrarNota(){
         System.out.println("Codigo del estudiante:");
