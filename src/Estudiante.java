@@ -1,21 +1,27 @@
+import java.util.ArrayList;
+
 public class Estudiante {
+
     private String codigo;
     private String nombre;
     private String apellido;
     private int edad;
     private int semestre;
 
-    public Estudiante (){
+    private ArrayList<Nota> notas = new ArrayList<>();
 
+    public Estudiante() {
     }
 
-    public Estudiante(String codigo, String nombre, String apellido, int edad, int semestre){
+    public Estudiante(String codigo, String nombre, String apellido, int edad, int semestre) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.semestre = semestre;
+        this.notas = new ArrayList<>();
     }
+
 
     public String getCodigo() {
         return codigo;
@@ -57,13 +63,37 @@ public class Estudiante {
         this.semestre = semestre;
     }
 
-    public String toString(){
-        return "Estudiante" +
+
+
+    public void agregarNota(Nota nota) {
+        notas.add(nota);
+    }
+
+    public ArrayList<Nota> getNotas() {
+        return notas;
+    }
+
+
+
+    @Override
+    public String toString() {
+
+        String info = "Estudiante" +
                 "\nCodigo: " + codigo +
                 "\nNombre: " + nombre +
                 "\nApellido: " + apellido +
                 "\nEdad: " + edad +
                 "\nSemestre: " + semestre;
-    }
 
+        if (notas.isEmpty()) {
+            info += "\nNotas: No tiene notas registradas";
+        } else {
+            info += "\nNotas:";
+            for (Nota n : notas) {
+                info += "\n - " + n;
+            }
+        }
+
+        return info;
+    }
 }
