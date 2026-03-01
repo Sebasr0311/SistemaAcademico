@@ -166,6 +166,36 @@ public class Main {
         System.out.println("Asignatura registrada");
     }
 
+    static void listarAsignaturas() {
+        if(listaAsignaturas.isEmpty()){
+            System.out.println("No hay asignaturas");
+            return;
+        }
+
+        for(Asignatura a : listaAsignaturas){
+            System.out.println(a);
+        }
+    }
+
+    static void buscarAsignatura(){
+        if(listaAsignaturas.isEmpty()){
+            System.out.println("No hay asignaturas registradas");
+            return;
+        }
+
+        System.out.println("Codigo de la asignatura:");
+        int codigo = sc.nextInt();
+        sc.nextLine();
+
+        for(Asignatura a : listaAsignaturas){
+            if(a.getCodigo() == codigo){
+                System.out.println(a);
+                return;
+            }
+        }
+        System.out.println("Asignatura no encontrada");
+    }
+
     //CREATE
     public void registrarNota(){
         System.out.println("Codigo del estudiante:");
