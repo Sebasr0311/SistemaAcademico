@@ -16,6 +16,29 @@ public class Estudiante {
         this.edad = edad;
         this.semestre = semestre;
     }
+    //Sobrecarga de constructor
+    public Estudiante(String codigo, String nombre, String apellido,int edad){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    public Estudiante(String codigo, String nombre, String apellido){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public Estudiante(String codigo, String nombre){
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
+
+    public Estudiante(String codigo){
+        this.codigo = codigo;
+    }
+    
 
     public String getCodigo() {
         return codigo;

@@ -163,7 +163,7 @@ public class Main {
         var creditos = sc.nextInt();
         sc.nextLine();
 
-        Asignatura a = new Asignatura(nombreAsignatura, creditos);
+        Asignatura a = new Asignatura(creditos, nombreAsignatura);
 
         System.out.println("Valor de la nota:");
         var valorNota = sc.nextDouble();

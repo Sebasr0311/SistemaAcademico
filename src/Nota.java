@@ -10,6 +10,16 @@ public class Nota {
         this.periodo = periodo; 
         this.asignatura = asignatura;
     }
+    //Sobrecarga de constructor
+    public Nota(double valor, String periodo) {
+        this.valor = valor;
+        this.periodo = periodo; 
+    }
+    //Sobrecarga de constructor
+    public Nota(double valor) {
+        this.valor = valor;
+    }
+        
 
     //getters y setters
     protected double getValor() {   

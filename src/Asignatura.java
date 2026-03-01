@@ -12,7 +12,22 @@ public class Asignatura {
         this.creditos = creditos;
         this.profesor = profesor;
     }
-    
+    //Sobrecarga de constructor
+    public Asignatura(int codigo, String nombre, int creditos) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.creditos = creditos;
+    }
+
+    public Asignatura(int codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
+
+    public Asignatura(int codigo) {
+        this.codigo = codigo;
+    }
+
     //Getters y Setters
     protected int getCodigo() {
         return this.codigo;
